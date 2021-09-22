@@ -1,0 +1,234 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{bold-extra}
+\usepackage{appendix}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{listings}
+\usepackage{multicol,multirow}
+\usepackage{subfigure}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage{tikz}
+\usepackage{xcolor}
+\geometry{a4paper,left=1in,right=1in,top=1in,bottom=1in}
+\begin{document}
+\centerline{\Huge{{\textbf{PHYSICS II\ \ Problem Set 1}}}}
+\vspace{0.5cm}
+\leftline{\large{Name: Haotian Fu}}
+\rightline{\large{Student ID: 520021910012}}
+\section*{\large \textbf{Problem 1}}~{\textbf{Solution}}
+
+Free-body Diagrams are show as follows.
+
+
+For Point A
+\begin{align}
+    \left\{
+    \begin{array}{l}
+        E_{ya} = \frac{1}{4\pi\varepsilon_0} \cdot \left( -\frac{q}{(a/2)^2} + \frac{2q}{(a/2)^2} - \frac{q}{(a/2)^2+a^2} \times \frac{1}{\sqrt{5}} \right) \\
+        E_{xa} = -\frac{1}{4\pi\varepsilon_0} \cdot \left( \frac{-q}{(a/2)^2+a^2} \times \frac{2}{\sqrt{5}} \right)
+    \end{array}
+    \right. 
+    \label{1-A}
+\end{align}
+
+For Point B
+\begin{align}
+    \left\{
+    \begin{array}{l}
+        E_{yb} = \frac{1}{4\pi\varepsilon_0} \cdot \left( -\frac{-q}{a^2} - \frac{2q}{a^2+a^2} \times \frac{1}{\sqrt{2}}\right) \\
+        E_{xb} = \frac{1}{4\pi\varepsilon_0} \cdot \left( \frac{q}{a^2} + \frac{2q}{a^2+a^2} \times \frac{1}{\sqrt{2}} \right)
+    \end{array}
+    \right. 
+    \label{1-B}
+\end{align}
+
+For Point C
+\begin{align}
+    \left\{
+    \begin{array}{l}
+        E_{yc} = \frac{1}{4\pi\varepsilon} \cdot \left( \frac{q}{(a/2)^2+(a/2)^2} \times \frac{1}{\sqrt{2}} - \frac{-q}{(a/2)^2+(a/2)^2} \times 
+        \frac{1}{\sqrt{2}} - \frac{2q}{(a/2)^2+(a/2)^2} \times \frac{1}{\sqrt{2}} \right) \\
+        E_{xc} = \frac{1}{4\pi\varepsilon} \cdot \left( \frac{q}{(a/2)^2+(a/2)^2} \times \frac{1}{\sqrt{2}} - \frac{-q}{(a/2)^2+(a/2)^2} \times 
+        \frac{1}{\sqrt{2}} + \frac{2q}{(a/2)^2+(a/2)^2} \times \frac{1}{\sqrt{2}} \right)
+    \end{array}
+    \right. 
+    \label{1-C}
+\end{align}
+
+Solving Eq.(\ref{1-A})(\ref{1-B})(\ref{1-C}) we get
+\begin{align*}
+    \left\{
+        \begin{array}{l}
+             E_{ya} =  \frac{1}{4\pi\varepsilon_0} \cdot \frac{100-4\sqrt{5}q}{25a^2}\\
+             E_{xa} = \frac{1}{4\pi\varepsilon_0} \cdot \frac{8\sqrt{5}q}{25a^2}
+        \end{array}
+    \right.
+    \left\{
+        \begin{array}{l}
+             E_{yb} = \frac{1}{4\pi\varepsilon_0} \cdot \frac{(2-\sqrt{2})q}{2a^2} \\
+             E_{xb} = \frac{1}{4\pi\varepsilon_0} \cdot \frac{(2+\sqrt{2})q}{2a^2}
+        \end{array}
+    \right.
+    \left\{
+        \begin{array}{l}
+             E_{yc} =  0\\
+             E_{xc} = \frac{1}{4\pi\varepsilon_0} \cdot \frac{4\sqrt{2}q}{a^2}
+        \end{array}
+    \right.
+\end{align*}
+
+Hence
+\begin{align}
+    E_A &= \frac{1}{4\pi\varepsilon_0} \cdot \frac{8\sqrt{5}q}{25a^2} \hat{n_x} + \frac{1}{4\pi\varepsilon_0} \cdot \frac{100-4\sqrt{5}q}{25a^2} \hat{n_y} \\
+    E_B &= \frac{1}{4\pi\varepsilon_0} \cdot \frac{(2+\sqrt{2})q}{2a^2} \hat{n_x} +  \frac{1}{4\pi\varepsilon_0} \cdot \frac{(2-\sqrt{2})q}{2a^2} \hat{n_y} \\
+    E_C &=  \frac{1}{4\pi\varepsilon_0} \cdot \frac{(2-\sqrt{2})q}{2a^2} \frac{4\sqrt{2}q}{a^2} \hat{n_x}
+\end{align}
+where units are all [V/m].
+
+Plug in all the data, we get
+\begin{align}
+    \textbf{E}_A &= 6.43 \times 10^{20} \hat{n_x} + 3.27 \times 10^{21} \hat{n_y} \\
+    \textbf{E}_B &= 1.53 \times 10^{21} \hat{n_x} - 2.63 \times 10^{20} \hat{n_y} \\
+    \textbf{E}_C &= 5.08 \times 10^{21} \hat{n_x}
+\end{align}
+where units are all [V/m].
+
+\section*{\large \textbf{Problem 2}}~{\textbf{Solution}}
+
+According to symmetry, we deduce that electric fields formed by any rods symmetric about origin will be cancelled out.
+
+Hence, only considering the magnitude of charges, $A$ has $\frac{1}{3}Q$, $B$ has $\frac{\sqrt{2}}{2}Q$, $C$ has $Q$ and $D$ has 0.
+
+Thus
+\begin{equation*}
+    C > B > A > D
+\end{equation*}
+
+\section*{\large \textbf{Problem 3}}~{\textbf{Solution}}
+
+\begin{enumerate}[(a)]
+    \item For every tiny slice of the rod, suppose its distance from the origin is $x$, then we can denote the electric field as
+    \begin{align}
+        E = \int_0^l \frac{1}{4\pi\varepsilon_0} \cdot \frac{\lambda dx}{(l+a-x)^2} = \frac{\lambda}{4\pi\varepsilon_0} \int_0^l \frac{1}{(l+a-x)^2} dx
+    \end{align}
+    Hence the magnitude of electric filed is
+    \begin{align}
+        E = \frac{\lambda}{4\pi\varepsilon_0} \left( \frac{1}{a} - \frac{1}{a+l} \right)
+    \end{align}
+    
+    \item Analogously, we denote the electric field as
+    \begin{align}
+        E = \int_0^l \frac{1}{4\pi\varepsilon_0} \cdot \frac{\lambda dx}{(l+a-x)^2} = \int_0^l \frac{1}{4\pi\varepsilon_0} \cdot \frac{Ax dx}{(l+a-x)^2}
+    \end{align}
+    Hence we get
+    \begin{align}
+        E = \frac{A}{4\pi\varepsilon_0} \left( \ln \left( \frac{a}{a+l} \right) + \frac{l}{a} \right)
+    \end{align}
+\end{enumerate}
+
+\section*{\large \textbf{Problem 4}}~{\textbf{Solution}}
+
+\begin{enumerate}[(a)]
+    \item For tiny piece $dx$ of the right rod, the force exerted on it is
+    \begin{align}
+        dF = \int_{-a/2}^{-a/2-l} \frac{1}{4\pi\varepsilon_0} \cdot \frac{\eta_e d(-s) \cdot \eta_e dx}{(x-s)^2}
+    \end{align}
+    where $\eta_e$ denotes the linear charge density of the rod and $s$ denotes the coordinate of the tiny piece $d(-s)$ of the left rod.
+    
+    Hence we can denote the force exerted on the whole right rod
+    \begin{align}
+        F = \int_{a/2}^{a/2+l} \int_{-a/2}^{-a/2-l} \frac{1}{4\pi\varepsilon_0} \cdot \frac{\eta_e d(-s) \cdot \eta_e dx}{(x-s)^2}
+    \end{align}
+    
+    Then through calculation
+    \begin{align}
+         F &= \int_{a/2}^{a/2+l} \int_{-a/2}^{-a/2-l} \frac{1}{4\pi\varepsilon_0} \cdot \frac{\eta_e d(-s) \cdot \eta_e dx}{(x-s)^2} \nonumber \\
+         &= \frac{\eta_e ^2}{4\pi\varepsilon_0} \int_{a/2}^{a/2+l} \int_{-a/2}^{-a/2-l} \frac{1}{(x-s)^2} d(-s)\ dx \nonumber \\
+         &= \frac{\eta_e ^2}{4\pi\varepsilon_0} \int_{a/2}^{a/2+l} \int_{a/2}^{a/2+l} \frac{1}{(x+s)^2} ds\ dx \nonumber \\
+         &= \frac{\eta_e ^2}{4\pi\varepsilon_0} \int_{x+a/2}^{x+a/2+l} \frac{1}{s^2} ds\ dx \nonumber \\
+         &= \frac{\eta_e ^2}{4\pi\varepsilon_0} \int_{a/2}^{a/2+l} \left( \frac{1}{x+\frac{a}{2}} - \frac{1}{x+\frac{a}{2}+l} \right) dx \nonumber \\
+         &= \frac{\eta_e ^2}{4\pi\varepsilon_0} \int_{a}^{a+l} \left( \frac{1}{x} - \frac{1}{x+l} \right) dx \nonumber \\
+         &= \frac{\eta_e ^2}{4\pi\varepsilon_0} \ln \left( \frac{(a+l)^2}{a(a+2l)} \right)
+    \end{align}
+    
+    Since $\eta_e$ is the linear charge density, we know
+    \begin{align}
+        \eta_e l = Q
+    \end{align}
+    
+    Thus
+    \begin{align}
+        F = \frac{Q^2}{4\pi\varepsilon_0 l^2} \ln \left( \frac{(a+l)^2}{a(a+2l)} \right)
+        \label{4-force}
+    \end{align}
+    
+    \item since
+    \begin{align}
+        \ln (1+u) = u - u^2/2 + u^3/3 - \cdots
+    \end{align}
+    when $u \ll 1$.
+    
+    For Eq.(\ref{4-force}),
+    \begin{align*}
+        \frac{(a+l)^2}{a(a+2l)} = 1 + \frac{l^2}{a^2+2al}
+    \end{align*}
+    while the latter part $\frac{l^2}{a^2+2al} \ll 1$ when $a \gg l$.
+    
+    Thus we denote Eq.(\ref{4-force}) as
+    \begin{align}
+        \frac{Q^2}{4\pi\varepsilon_0 l^2} \left( u - u^2/2 + u^3/3 - \cdots \right)
+        \label{4-b1}
+    \end{align}
+    where $u=l^2/(a^2+2al)$.
+    
+    Since $u \ll 1$, $u^2 \ll u$, thus we can ignore $u^2/2$, $u^3/3$, ... in Eq.(\ref{4-b1})
+    
+    Therefore, Eq.(\ref{4-force}) can be deduced as
+    \begin{align}
+        F = \frac{Q^2}{4\pi\varepsilon_0 l^2} \cdot \frac{l^2}{a^2+2al} = \frac{Q^2}{4\pi\varepsilon_0(a^2+2al)}
+    \end{align}
+    Since $a \gg l$, $a^2 \gg 2al$, then the most simplified force is
+    \begin{align}
+        F =  \frac{Q^2}{4\pi\varepsilon_0 a^2}
+    \end{align}
+    which interprets that the rod that exerts force on the other rod can be regard as a point charge as long as the distance between these two rods are far enough.
+\end{enumerate}
+
+\section*{\large \textbf{Problem 5}}~{\textbf{Solution}}
+
+\begin{enumerate}[(a)]
+    \item According to what we learned in the lecture, the electric field on the axis of symmetry perpendicular to a single ring with radius $r$ is
+    \begin{align}
+        dE = \frac{1}{4\pi\varepsilon_0} \cdot \frac{x(\sigma\cdot 2\pi r dr)}{(x^2+r^2)^{3/2}}
+    \end{align}
+    where $x$ denotes the distance between the any field point and the geometric center of the disk.
+    
+    Then we can calculate the total electric field
+    \begin{align*}
+        E &= \int_{R_1}^{R_2} \frac{1}{4\pi\varepsilon_0} \cdot \frac{x(\sigma\cdot 2\pi r dr)}{(x^2+r^2)^{3/2}} \\
+        &= \frac{\sigma x}{4\varepsilon_0} \int_{x^2+R_1 ^2}^{x^2+R_2 ^2} \frac{1}{u^{3/2}} du  \\
+        &= \frac{\sigma x}{4\varepsilon_0} \left(  -2u^{-1/2} \bigg|_{x^2+R_1 ^2}^{x^2+R_2 ^2} \right)
+    \end{align*}
+    where $u=x^2+r^2$ discussed in the lecture.
+    
+    Hence
+    \begin{align}
+        E = \frac{\sigma x}{2\varepsilon_0} \left( \frac{1}{\sqrt{x^2+R_1 ^2}} - \frac{1}{\sqrt{x^2+R_2 ^2}} \right)
+    \end{align}
+    
+    \item When the point is sufficiently close to the geometric center of the disk, $x \ll R_1$ and $x \ll R_2$. Hence
+    \begin{align}
+        E \approx \frac{\sigma x}{2\varepsilon_0} \left( \frac{1}{R_1} - \frac{1}{R_2} \right) = \frac{\sigma (1/R_1 - 1/R_2)}{2\varepsilon_0}x
+    \end{align}
+    which shows that the magnitude of the electric field is approximately proportional to the distance from the center.
+    
+    \textbf{Consequence of this fact:} We may use two parallel disks with holes at the center to form uniform electric field.
+    
+\end{enumerate}
+
+\end{document}
