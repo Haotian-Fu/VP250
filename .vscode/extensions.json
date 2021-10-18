@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "manasxx.nest",
+        "vomout.latex-syntax",
+        "pkief.material-icon-theme",
+        "mushan.vscode-paste-image",
+        "streetsidesoftware.code-spell-checker",
+        "firefox-devtools.vscode-firefox-debug",
+        "lehni.vscode-fix-checksums",
+        "oderwat.indent-rainbow",
+        "vscode-icons-team.vscode-icons",
+        "coenraads.bracket-pair-colorizer"
+    ]
+}
