@@ -9,6 +9,7 @@
         "lehni.vscode-fix-checksums",
         "oderwat.indent-rainbow",
         "vscode-icons-team.vscode-icons",
-        "coenraads.bracket-pair-colorizer"
+        "coenraads.bracket-pair-colorizer",
+        "ms-vscode.powershell"
     ]
 }

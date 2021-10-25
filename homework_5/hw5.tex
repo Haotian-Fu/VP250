@@ -100,10 +100,11 @@ Assignment 5 \hfill Instructor: Dr. Mateusz Krzyzosiak \\
 		 & \frac{2\rho_{01}\rho_{02}}{\rho_{01}+\rho_{02}}(1+\alpha_p(T-T_0)) = \frac{2\rho_{01}(1+\alpha_1(T-T_0))\rho_{02}(1+\alpha_2(T-T_0))}{\rho_{01}(1+\alpha_1(T-T_0))+\rho_{02}(1+\alpha_2(T-T_0))}
 	\end{align*}
 
-	Hence
+	while $T_0 = 0$,hence
 	\begin{align}
 		\alpha_s & = \frac{\rho_{01}\alpha_1 + \rho_{02}\alpha_2}{\rho_{01} + \rho_{02}}                                                                                            \\
-		\alpha_p & = \frac{\rho_{01}\alpha_2+\rho_{02}\alpha_1+(\rho_{01}+\rho_{02}\alpha_1\alpha_2(T-T_0))}{\rho_{01}+\rho_{02}+\rho_{01}\alpha_1(T-T_0)+\rho_{02}\alpha_2(T-T_0)}
+		\alpha_p & = \frac{\rho_{01}\alpha_2+\rho_{02}\alpha_1+(\rho_{01}+\rho_{02})\alpha_1\alpha_2(T-T_0)}{\rho_{01}+\rho_{02}+\rho_{01}\alpha_1(T-T_0)+\rho_{02}\alpha_2(T-T_0)}
+		= \frac{\rho_{01}\alpha_2+\rho_{02}\alpha_1+(\rho_{01}+\rho_{02})\alpha_1\alpha_2T}{\rho_{01}+\rho_{02}+\rho_{01}\alpha_1T+\rho_{02}\alpha_2T}
 	\end{align}
 
 \end{solution}
@@ -267,16 +268,20 @@ $\varepsilon_2=14V$, $\varepsilon_3=36V$. The internal resistance of the emfs is
 	Then we have
 	\begin{align}
 		-\varepsilon_1 + i_1R_1 + \varepsilon_2 + (i_1-i_2)R_2 & = 0 \\
-		\varepsilon_3 + i_2R_3 + (i_2-i_1)R_2                  & = 0
+		-\varepsilon_3 + i_2R_3 + (i_2-i_1)R_2                  & = 0
 	\end{align}
 	Then we get
 	\begin{align}
 		\left\{
 		\begin{array}{c}
-			i_1 = -\frac{45}{19}\ [A] \\
-			i_2 = -\frac{96}{19}\ [A]
+			i_1 = \frac{99}{19}\ [A] \\
+			i_2 = \frac{120}{19}\ [A]
 		\end{array}
 		\right.
+	\end{align}
+	Hence we know the current passing through each resistor.
+	\begin{align}
+		i_{R_1} = \frac{99}{19}\ [A] \qquad i_{R_2} = \frac{21}{19}\ [A] \qquad i_{R_3} = \frac{120}{99}\ [A]
 	\end{align}
 \end{solution}
 
@@ -380,7 +385,7 @@ the charge of one electron.
 			      \ln\left( \frac{q_e}{Q_{max}} \right) = -\frac{t_d}{RC}
 		      \end{align}
 		      Hence we conclude that, $t_d$ does not depend on $R$ or $C$ separately but
-		      depend on $RC$ as a whole.
+		      depend on $RC$ as a whole. Namely, if $RC$ is constant, $t_d$ is also a constant.
 	\end{enumerate}
 
 \end{solution}
